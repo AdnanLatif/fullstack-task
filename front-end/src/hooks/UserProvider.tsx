@@ -25,8 +25,16 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const id = Math.floor(Math.random() * 10) + 1;
+    const baseUrl = process.env.VITE_API_URL;
+
+    if (!baseUrl) {
+      console.error('VITE_API_URL is not defined in the environment');
+      setLoading(false);
+      return;
+    }
+
     axios
-      .get(`${import.meta.env.VITE_API_URL}/users/${id}`)
+      .get(`${baseUrl}/users/${id}`)
       .then((res) => setUser(res.data))
       .catch(console.error)
       .finally(() => setLoading(false));

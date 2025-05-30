@@ -15,10 +15,18 @@ const useUser = () => {
 
   useEffect(() => {
     const id = Math.floor(Math.random() * 10) + 1;
+    const baseUrl = process.env.VITE_API_URL;
+
+    if (!baseUrl) {
+      console.error('VITE_API_URL is not defined in the environment');
+      setLoading(false);
+      return;
+    }
+
     axios
-      .get(`${import.meta.env.VITE_API_URL}/users/${id}`)
-      .then(res => setUser(res.data))
-      .catch(err => console.error(err))
+      .get(`${baseUrl}/users/${id}`)
+      .then((res) => setUser(res.data))
+      .catch((err) => console.error(err))
       .finally(() => setLoading(false));
   }, []);
 

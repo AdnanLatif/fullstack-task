@@ -127,7 +127,11 @@ function Sidebar() {
       {/* User Info */}
       {!collapsed && (
         <div style={{ textAlign: 'center', padding: '24px 16px' }}>
-          <Avatar src='/assets/images/avatar.png' size={64} />
+          <Avatar
+            src={user?.avatar || '/assets/images/avatar.png'}
+            size={64}
+            alt='User avatar'
+          />
           <div style={{ marginTop: 8, fontWeight: 600 }}>
             {loading ? 'Loading...' : user?.name || 'Allie Simon'}
           </div>
