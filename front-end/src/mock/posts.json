@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Are you ready to buy a new modern home",
+    "body": "The thing is that I'm quite fond of love. I think that it's a pretty all right deal...",
+    "date": "August 15, 2022",
+    "image": "/images/home.jpg"
+  },
+  {
+    "id": 2,
+    "title": "The world is at your door step",
+    "body": "Blind would equal while oh mr do style. Lain led and fact none...",
+    "date": "July 28, 2022",
+    "image": "/images/meeting.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Starting a business in Qatar",
+    "body": "Advantage old had otherwise sincerity dependent additions...",
+    "date": "July 28, 2022",
+    "image": "/images/qatar.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Digitising your access to industrial banking",
+    "body": "Advantage old had otherwise sincerity dependent additions...",
+    "date": "July 28, 2022",
+    "image": "/images/banking.jpg"
+  }
+]

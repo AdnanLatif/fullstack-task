@@ -1,0 +1,57 @@
+# ======================
+# Root-level ignores
+# ======================
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*.local
+*.local
+
+# Editor & IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ======================
+# Frontend (Vite) - /front-end
+# ======================
+
+/front-end/node_modules/
+/front-end/dist/
+/front-end/.vite/
+/front-end/.cache/
+/front-end/coverage/
+/front-end/.env
+
+# ======================
+# Backend (Node.js/Express) - /back-end
+# ======================
+
+/back-end/node_modules/
+/back-end/dist/
+/back-end/.env
+/back-end/.cache/
+/back-end/coverage/
+
+# PM2 or log directories (optional)
+/back-end/pids
+/back-end/logs
+/back-end/tmp
