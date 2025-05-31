@@ -42,9 +42,14 @@ function Sidebar() {
   const [collapsed, setCollapsed] = useState(false);
   const location = useLocation();
 
+  // Helper function to make main menu labels bold
+  const boldLabel = (text: string) => (
+    <span style={{ fontWeight: 'bold' }}>{text}</span>
+  );
+
   const menuItems: MenuItem[] = [
     getItem(
-      'Dashboards',
+      boldLabel('Dashboards'),
       'dashboards',
       undefined,
       [
@@ -61,7 +66,7 @@ function Sidebar() {
     ),
 
     getItem(
-      'Blogs',
+      boldLabel('Blogs'),
       'blogs',
       undefined,
       [
@@ -72,17 +77,15 @@ function Sidebar() {
       'group',
     ),
 
-    getItem(
-      '',
-      'more',
-      undefined,
-      [
-        getItem('Documentation', '/docs', <BookOutlined />),
-        getItem('Reports', '/reports', <BarChartOutlined />),
-        getItem('Need Help?', '/help', <QuestionCircleOutlined />),
-      ],
-      'group',
-    ),
+    getItem(boldLabel('Documentation'), 'docs', <BookOutlined />, [
+      // submenu items here
+    ]),
+    getItem(boldLabel('Reports'), 'reports', <BarChartOutlined />, [
+      // submenu items here
+    ]),
+    getItem(boldLabel('Need Help?'), 'help', <QuestionCircleOutlined />, [
+      // submenu items here
+    ]),
   ];
 
   return (
@@ -90,6 +93,7 @@ function Sidebar() {
       collapsible
       collapsed={collapsed}
       onCollapse={() => setCollapsed(!collapsed)}
+      trigger={null}
       width={260}
       style={{
         backgroundColor: '#fff',
@@ -148,6 +152,7 @@ function Sidebar() {
         selectedKeys={[location.pathname]}
         style={{ border: 'none', background: 'transparent' }}
         items={menuItems}
+        defaultOpenKeys={['docs', 'reports', 'help']}
       />
     </Sider>
   );

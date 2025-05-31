@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { List, Tabs, Typography, Button, Pagination, Spin } from 'antd';
+import { CaretUpOutlined, CaretDownOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../hooks/UserProvider';
 import axios from 'axios';
@@ -13,6 +14,7 @@ interface Post {
   title: string;
   body: string;
   image: string;
+  date?: string;
 }
 
 function Blogs() {
@@ -64,8 +66,13 @@ function Blogs() {
           marginBottom: 16,
         }}>
         <BlogHeaderCard />
-
-        <Button>Filter/Sort by</Button>
+        <Button>
+          <CaretUpOutlined style={{ fontSize: 10, marginRight: -18 }} />
+          <CaretDownOutlined
+            style={{ fontSize: 10, marginRight: 2, marginTop: 10 }}
+          />
+          <span style={{ marginTop: 3 }}>Filter/Sort by</span>
+        </Button>
       </div>
 
       <Tabs
@@ -85,47 +92,67 @@ function Blogs() {
                         padding: '16px 0',
                         borderBottom: '1px solid #f0f0f0',
                         cursor: 'pointer',
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'flex-start',
                       }}
                       onClick={() => navigate(`/posts/${item.id}`)}
                       key={item.id}>
-                      <List.Item.Meta
-                        avatar={
-                          <img
-                            src={item.image}
-                            alt='post'
-                            style={{
-                              width: 100,
-                              height: 72,
-                              borderRadius: 8,
-                              objectFit: 'cover',
-                            }}
-                          />
-                        }
-                        title={
-                          <span style={{ fontSize: 15, fontWeight: 600 }}>
-                            {item.title}
-                          </span>
-                        }
-                        description={
-                          <>
-                            <div style={{ fontSize: 13, color: '#555' }}>
-                              {item.body.substring(0, 100)}...
-                            </div>
-                            <div
+                      <div style={{ flex: 1 }}>
+                        <List.Item.Meta
+                          avatar={
+                            <img
+                              src={item.image}
+                              alt='post'
                               style={{
-                                color: '#1677ff',
-                                fontSize: 13,
-                                fontWeight: 500,
-                              }}>
-                              Read more
-                            </div>
-                          </>
-                        }
-                      />
+                                width: 100,
+                                height: 72,
+                                borderRadius: 8,
+                                objectFit: 'cover',
+                              }}
+                            />
+                          }
+                          title={
+                            <span style={{ fontSize: 15, fontWeight: 600 }}>
+                              {item.title}
+                            </span>
+                          }
+                          description={
+                            <>
+                              <div style={{ fontSize: 13, color: '#555' }}>
+                                {item.body.substring(0, 100)}...
+                              </div>
+                              <div
+                                style={{
+                                  color: '#1677ff',
+                                  fontSize: 13,
+                                  fontWeight: 500,
+                                }}>
+                                Read more
+                              </div>
+                            </>
+                          }
+                        />
+                      </div>
+                      <div
+                        style={{
+                          minWidth: 100,
+                          textAlign: 'right',
+                          fontSize: 13,
+                          color: '#888',
+                        }}>
+                        {item.date}
+                      </div>
                     </List.Item>
                   )}
                 />
-                <div style={{ textAlign: 'center', marginTop: 20 }}>
+                <div
+                  style={{
+                    textAlign: 'center',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    marginTop: 20,
+                  }}>
                   <Pagination
                     total={total}
                     pageSize={pageSize}

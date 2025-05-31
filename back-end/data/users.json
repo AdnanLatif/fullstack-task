@@ -4,69 +4,69 @@
     "name": "Allie Simon",
     "username": "allie",
     "email": "allie@example.com",
-    "avatar": "/assets/avatars/user1.png"
+    "avatar": "/assets/images/avatar.png"
   },
   {
     "id": 2,
     "name": "John Doe",
     "username": "johnd",
     "email": "john@example.com",
-    "avatar": "/assets/avatars/user2.png"
+    "avatar": "/assets/images/avatar.png"
   },
   {
     "id": 3,
     "name": "Emma Watson",
     "username": "emmaw",
     "email": "emma@example.com",
-    "avatar": "/assets/avatars/user3.png"
+    "avatar": "/assets/images/avatar.png"
   },
   {
     "id": 4,
     "name": "Liam Johnson",
     "username": "liamj",
     "email": "liam@example.com",
-    "avatar": "/assets/avatars/user4.png"
+    "avatar": "/assets/images/avatar.png"
   },
   {
     "id": 5,
     "name": "Olivia Brown",
     "username": "oliviab",
     "email": "olivia@example.com",
-    "avatar": "/assets/avatars/user5.png"
+    "avatar": "/assets/images/avatar.png"
   },
   {
     "id": 6,
     "name": "Noah Wilson",
     "username": "noahw",
     "email": "noah@example.com",
-    "avatar": "/assets/avatars/user6.png"
+    "avatar": "/assets/images/avatar.png"
   },
   {
     "id": 7,
     "name": "Ava Davis",
     "username": "avad",
     "email": "ava@example.com",
-    "avatar": "/assets/avatars/user7.png"
+    "avatar": "/assets/images/avatar.png"
   },
   {
     "id": 8,
     "name": "William Clark",
     "username": "willc",
     "email": "will@example.com",
-    "avatar": "/assets/avatars/user8.png"
+    "avatar": "/assets/images/avatar.png"
   },
   {
     "id": 9,
     "name": "Sophia Martin",
     "username": "sophiam",
     "email": "sophia@example.com",
-    "avatar": "/assets/avatars/user9.png"
+    "avatar": "/assets/images/avatar.png"
   },
   {
     "id": 10,
     "name": "James Lee",
     "username": "jamesl",
     "email": "james@example.com",
-    "avatar": "/assets/avatars/user10.png"
+    "avatar": "/assets/images/avatar.png"
   }
 ]

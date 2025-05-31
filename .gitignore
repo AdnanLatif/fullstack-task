@@ -55,3 +55,4 @@ Thumbs.db
 /back-end/pids
 /back-end/logs
 /back-end/tmp
+/back-end/dist/
